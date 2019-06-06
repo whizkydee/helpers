@@ -1,0 +1,8 @@
+{
+  "name": "@mrolaolu/helpers",
+  "version": "1.0.0",
+  "description": "A collection of super-handy JavaScript utility functions for front-end developement.",
+  "main": "index.js",
+  "author": "Olaolu Olawuyi <mrolaolu@gmail.com>",
+  "license": "MIT"
+}
