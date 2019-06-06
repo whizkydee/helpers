@@ -1,8 +1,21 @@
 {
   "name": "@mrolaolu/helpers",
-  "version": "1.0.0",
+  "license": "MIT",
+  "version": "0.0.1",
   "description": "A collection of super-handy JavaScript utility functions for front-end developement.",
   "main": "index.js",
-  "author": "Olaolu Olawuyi <mrolaolu@gmail.com>",
-  "license": "MIT"
+  "author": {
+    "name": "Olaolu Olawuyi",
+    "email": "mrolaolu@gmail.com",
+    "url": "https://twitter.com/mrolaolu"
+  },
+  "keywords": [
+    "javascript",
+    "js",
+    "functions",
+    "utility",
+    "utilities",
+    "helpers",
+    "helper functions"
+  ]
 }
