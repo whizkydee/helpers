@@ -1,4 +1,4 @@
-const resetScroll = elem => {
+const resetScroll = (elem = document.documentElement) => {
   if (elem && elem instanceof HTMLElement) {
     elem.scrollTop = 0
     elem.scrollLeft = 0

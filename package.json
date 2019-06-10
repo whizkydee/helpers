@@ -1,8 +1,9 @@
 {
   "name": "@mrolaolu/helpers",
   "license": "MIT",
-  "version": "0.0.1",
-  "description": "A collection of super-handy JavaScript utility functions for front-end developement.",
+  "version": "0.0.2",
+  "repository": "whizkydee/helpers",
+  "description": "Super-handy JavaScript utility functions for front-end development.",
   "main": "index.js",
   "author": {
     "name": "Olaolu Olawuyi",

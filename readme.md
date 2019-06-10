@@ -1,7 +1,6 @@
 # [@mrolaolu/helpers](https://npm.im/@mrolaolu/helpers)
 
-> A collection of super-handy JavaScript utility functions for front-end
-> developement. 📦
+> Super-handy JavaScript utility functions for front-end development. 📦
 
 **Note:** This is a work in progress and as such is not well documented or
 ready-to-use.
@@ -13,6 +12,8 @@ $ npm install @mrolaolu/helpers --save
 ```
 
 ## ⚒ Usage
+
+Let's say you want to use the `getFormFields` helper...
 
 ```js
 import { getFormFields } from '@mrolaolu/helpers'
