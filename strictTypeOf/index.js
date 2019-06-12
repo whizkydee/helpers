@@ -28,12 +28,12 @@ const strictTypeOf = (_value, type) => {
     let bitPiece = 0
     
     type.forEach( _type => {
-      bitPiece |= Number((typeof _type === 'function' ?  (value instanceof _type) : (_value === _type)))
+      bitPiece |= Number((typeof _type === 'function' ?  (value.constructor === _type) : (_value === _type)))
     })
 
     return Boolean(bitPiece)
   }else{
-    return (value instanceof type)
+    return (value.constructor === type)
   }
 }
 
