@@ -10,10 +10,12 @@ const types = {
   'undefined':undefined
 }
 
-const strictTypeOf = (_value, type) => {
+const strictTypeOf = (_value, type = []) => {
   let value = Object(_value)
   
-  type = types[type]
+  try{
+    type = types[type]
+  }catch(e){}
 
   if(typeof type !== 'function'){
     if(!type || typeof type.length !== 'number'){
@@ -28,7 +30,10 @@ const strictTypeOf = (_value, type) => {
     let bitPiece = 0
     
     type.forEach( _type => {
+      console.log(_type)
+      _type = types[_type]
       bitPiece |= Number((typeof _type === 'function' ?  (value.constructor === _type) : (_value === _type)))
+      console.log(Boolean(citPiece))
     })
 
     return Boolean(bitPiece)
