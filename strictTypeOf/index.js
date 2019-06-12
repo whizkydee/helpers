@@ -1,10 +1,16 @@
 const checkTypeName = (target, type) => {
-   let typeName = String(target && (target.constructor || {name:(typeof target)}).name)
+   let typeName = ''
+   if(target === "" || target === false){
+      typeName = (typeof target)
+   }else{
+      typeName = String(target && (target.constructor || {name:""}).name)
+   }
    return !!(typeName.toLowerCase().indexOf(type) + 1)
 }
 
 const strictTypeOf = (value, type = []) => {
   let result = false
+     
   if(typeof type !== 'string'){
     
     if(typeof type.length !== 'number'){
@@ -26,6 +32,7 @@ const strictTypeOf = (value, type = []) => {
     if(typeof type === 'function'){
       type = (type.name || type.displayName).toLowercase()
     }
+    
     result = checkTypeName(value, type)
   }
   
