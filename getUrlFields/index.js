@@ -8,14 +8,15 @@ const handleQuery = (aspect, url) => {
         for(var k=0; k < q.length; k++){
           var pair = q[k];
           if(typeof(aspect) !== "string"){
-             aspect = pair.substring(0, pair.indexOf("=")-1)
+             aspect = pair.substring(0, pair.indexOf("="))
           }
           if(pair.indexOf(aspect) != -1){
             result[aspect] = decodeURIComponent(pair.substring(pair.indexOf("=")+1));
           }
+          aspect = null
         }
          
-         return result;
+        return result;
 }
 
 const getUrlFields = () => {
