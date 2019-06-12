@@ -1,6 +1,6 @@
 const checkTypeName = (target, type) => {
    let typeName = ''
-   if(target === "" || target === false){
+   if(target === "" || target === false || target === 0){
       typeName = (typeof target)
    }else{
       typeName = String(target && (target.constructor || {name:""}).name)
