@@ -22,7 +22,7 @@ const strictTypeOf = (value, type = []) => {
     
     type.forEach( _type => {
       if(typeof _type === 'function'){
-        _type = (_type.name || _type.displayName).toLowercase()
+        _type = (_type.name || _type.displayName).toLowerCase()
       }
       bitPiece |= Number(checkTypeName(value, _type))
     })
@@ -30,7 +30,7 @@ const strictTypeOf = (value, type = []) => {
     result = Boolean(bitPiece)
   }else{
     if(typeof type === 'function'){
-      type = (type.name || type.displayName).toLowercase()
+      type = (type.name || type.displayName).toLowerCase()
     }
     
     result = checkTypeName(value, type)
