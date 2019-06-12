@@ -9,17 +9,14 @@ const strictTypeOf = (value, type = []) => {
     type = (type.name || type.displayName)
   }
  
-  if(typeof type !== 'function'){
-    if(!type || typeof type.length !== 'number'){
-      
-      if(value === type){
-        return true
-      }
-      
+  if(typeof type !== 'string'){
+    
+    if(typeof type.length !== 'number'){
       return false
     }
-
+    
     let bitPiece = 0
+    type = [].slice.call(type)
     
     type.forEach( _type => {
       if(typeof _type === 'function'){
