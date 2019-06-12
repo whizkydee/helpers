@@ -4,15 +4,11 @@ const checkTypeName = (target, type) => {
 }
 
 const strictTypeOf = (value, type = []) => {
-  
-  if(typeof type === 'function'){
-    type = (type.name || type.displayName)
-  }
- 
+  let result = false
   if(typeof type !== 'string'){
     
     if(typeof type.length !== 'number'){
-      return false
+      return result
     }
     
     let bitPiece = 0
@@ -20,15 +16,20 @@ const strictTypeOf = (value, type = []) => {
     
     type.forEach( _type => {
       if(typeof _type === 'function'){
-        _type = (type.name || type.displayName)
+        _type = (_type.name || _type.displayName).toLowercase()
       }
-      bitPiece |= Number(checkTypeName(value, type))
+      bitPiece |= Number(checkTypeName(value, _type))
     })
 
-    return Boolean(bitPiece)
+    result = Boolean(bitPiece)
   }else{
-    return checkTypeName(value, type)
+    if(typeof type === 'function'){
+      type = (type.name || type.displayName).toLowercase()
+    }
+    result = checkTypeName(value, type)
   }
+  
+  return result
 }
 
 export default strictTypeOf
