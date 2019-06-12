@@ -1,26 +1,18 @@
-const types = {
-  'string':String,
-  'array':Array,
-  'function':Function,
-  'object':Object,
-  'date':Date,
-  'boolean':Boolean,
-  'number':Number,
-  'null':null,
-  'undefined':undefined
+const checkTypeName = (target, type) => {
+   let typeName = String(target && (target.constructor || {name:(typeof target)}).name)
+   return !!(typeName.toLowerCase().indexOf(type) + 1)
 }
 
-const strictTypeOf = (_value, type = []) => {
-  let value = Object(_value)
+const strictTypeOf = (value, type = []) => {
   
-  if(typeof type === 'string'){
-    type = types[type]
+  if(typeof type === 'function'){
+    type = (type.name || type.displayName)
   }
  
   if(typeof type !== 'function'){
     if(!type || typeof type.length !== 'number'){
       
-      if(_value === type){
+      if(value === type){
         return true
       }
       
@@ -30,13 +22,15 @@ const strictTypeOf = (_value, type = []) => {
     let bitPiece = 0
     
     type.forEach( _type => {
-      _type = types[_type]
-      bitPiece |= Number((typeof _type === 'function' ?  (value.constructor === _type) : (_value === _type)))
+      if(typeof _type === 'function'){
+        _type = (type.name || type.displayName)
+      }
+      bitPiece |= Number(checkTypeName(value, type))
     })
 
     return Boolean(bitPiece)
   }else{
-    return (value.constructor === type)
+    return checkTypeName(value, type)
   }
 }
 
