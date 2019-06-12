@@ -37,7 +37,10 @@ import { strictTypeOf, toAmountString } from '@mrolaolu/helpers'
 ```
 
 ```js
-strictTypeOf(document.getElementById('form'), 'domelement')
+strictTypeOf(document, 'document')
+// => true
+
+strictTypeOf(document.getElementById('form'), 'element')
 // => true
 
 strictTypeOf(false, 'boolean')
