@@ -13,6 +13,7 @@ import debounce from './debounce'
 import countries from './countries'
 import emitEvent from './emitEvent'
 import dotAccess from './dotAccess'
+import isValueNan from './isValueNan'
 import resetScroll from './resetScroll'
 import getEventPath from './getEventPath'
 import scrollToElem from './scrollToElem'
@@ -32,6 +33,7 @@ export {
   countries,
   emitEvent,
   dotAccess,
+  isValueNan,
   resetScroll,
   getEventPath,
   scrollToElem,
