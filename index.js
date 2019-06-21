@@ -1,5 +1,5 @@
 /*!
- * @mrolaolu/helpers v0.0.5
+ * @mrolaolu/helpers v0.0.6
  * https://github.com/whizkydee/helpers
  * (c) 2019-present Olaolu Olawuyi
  * Released under the MIT License.
@@ -32,7 +32,6 @@ import getShortWeekday from './src/getShortWeekday'
 import countryDialCodes from './src/countryDialCodes'
 import arrayToListItems from './src/arrayToListItems'
 import getFullMonthName from './src/getFullMonthName'
-import getShortMonthName from './src/getShortMonthName'
 import getShortMonthName from './src/getShortMonthName'
 
 export {
