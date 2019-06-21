@@ -1,10 +1,10 @@
 {
   "name": "@mrolaolu/helpers",
   "license": "MIT",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": "whizkydee/helpers",
   "description": "Super-handy JavaScript utility functions for front-end development.",
-  "main": "index.js",
+  "main": "src/index.js",
   "author": {
     "name": "Olaolu Olawuyi",
     "email": "mrolaolu@gmail.com",
