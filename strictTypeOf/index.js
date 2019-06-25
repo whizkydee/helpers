@@ -8,10 +8,12 @@ const checkTypeName = (target, type) => {
    return !!(typeName.toLowerCase().indexOf(type) + 1)
 }
 
-const strictTypeOf = (value, type = []) => {
+const strictTypeOf = (value, type) => {
   let result = false
      
-  if(typeof type !== 'string'){
+  type = type || []
+  
+  if(typeof type === 'object'){
     
     if(typeof type.length !== 'number'){
       return result
