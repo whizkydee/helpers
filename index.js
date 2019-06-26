@@ -1,5 +1,5 @@
 /*!
- * @mrolaolu/helpers v0.0.6
+ * @mrolaolu/helpers v0.0.7
  * https://github.com/whizkydee/helpers
  * (c) 2019-present Olaolu Olawuyi
  * Released under the MIT License.
