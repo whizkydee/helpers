@@ -30,6 +30,35 @@ getFormFields(document.getElementById('form'))
 // => { $fields: Array, email: hello@olaolu.me, password: Unicorns!, ... }
 ```
 
+>More Examples
+
+```js
+import { strictTypeOf, toAmountString } from '@mrolaolu/helpers'
+```
+
+```js
+strictTypeOf(document, 'document')
+// => true
+
+strictTypeOf(document.getElementById('form'), 'element')
+// => true
+
+strictTypeOf(false, 'boolean')
+// => true
+
+strictTypeOf(null, ['undefined', 'null'])
+// => true
+
+strictTypeOf("hello!", ['date'])
+// => false
+
+strictTypeOf({}, ['object', 'array'])
+// => true
+
+toAmountString(250000)
+// => '250,000'
+```
+
 <!-- {p: style='display:none'} -->
 
 > MIT © [olaolu.me](https://olaolu.me) &nbsp;&middot;&nbsp; GitHub

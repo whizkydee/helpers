@@ -15,12 +15,16 @@ import countries from './src/countries'
 import findIndex from './src/findIndex'
 import emitEvent from './src/emitEvent'
 import dotAccess from './src/dotAccess'
+import isValueNan from './isValueNan' 
 import monthNames from './src/monthNames'
+import getUrlFields from './getUrlFields'
+import strictTypeOf from './strictTypeOf'
 import resetScroll from './src/resetScroll'
 import matchesQuery from './src/matchesQuery'
 import scrollToElem from './src/scrollToElem'
 import getEventPath from './src/getEventPath'
 import smoothScroll from './src/smoothScroll'
+import toAmountString from './toAmountString'
 import elementInView from './src/elementInView'
 import getFormFields from './src/getFormFields'
 import objectIsEmpty from './src/objectIsEmpty'
@@ -44,17 +48,21 @@ export {
   countries,
   emitEvent,
   dotAccess,
+  isValueNan,
   findIndex,
   monthNames,
   resetScroll,
   getEventPath,
   scrollToElem,
+  getUrlFields,
+  strictTypeOf,
   smoothScroll,
   matchesQuery,
   elementInView,
   objectIsEmpty,
   shortWeekdays,
   getFormFields,
+  toAmountString,
   getAspectRatio,
   getFullWeekday,
   shortMonthNames,
