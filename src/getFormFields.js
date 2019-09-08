@@ -1,17 +1,15 @@
-const getFormFields = (elem, selector = 'input[name]') => {
-  if (!(elem instanceof HTMLElement)) return null
-  const fields = [...elem.querySelectorAll(selector)]
+import isObject from './isObject'
 
-  if (!selector) {
-    return { ...new FormData(elem), $fields: fields }
-  } else {
-    return Object.assign(
-      { $fields: fields },
-      ...fields.map(({ name, value }) => ({
-        [name]: value,
-      }))
-    )
-  }
+export default function getFormFields(elem, selector = 'input[name]') {
+  if (!(elem instanceof HTMLFormElement)) return
+
+  const fields = Array.from(elem.querySelectorAll(selector) || [])
+  if (!selector) return { ...new FormData(elem), $fields: fields }
+
+  return Object.assign(
+    { $fields: fields },
+    ...fields.map(field => {
+      return isObject(field) && field.name && { [field.name]: field.value }
+    })
+  )
 }
-
-export default getFormFields

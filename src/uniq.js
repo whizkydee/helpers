@@ -1,3 +1,3 @@
-const uniq = array => [...new Set(array)]
-
-export default uniq
+export default function uniq(array) {
+  return Array.from(new Set(array))
+}

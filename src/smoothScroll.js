@@ -1,7 +1,6 @@
-const smoothScroll = (element, options) =>
+export default function smoothScroll(element, options) {
   document.querySelector(element).scrollIntoView({
     behavior: 'smooth',
     ...options,
   })
-
-export default smoothScroll
+}

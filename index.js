@@ -1,5 +1,5 @@
 /*!
- * @mrolaolu/helpers v0.1.0
+ * @mrolaolu/helpers v0.2.0
  * https://github.com/whizkydee/helpers
  * (c) 2019-present Olaolu Olawuyi
  * Released under the MIT License.
@@ -9,6 +9,9 @@ import uniq from './src/uniq'
 import toPx from './src/toPx'
 import wait from './src/wait'
 import sleep from './src/sleep'
+import pxToRem from './src/pxToRem'
+import slugify from './src/slugify'
+import isObject from './src/isObject'
 import safeMap from './src/safeMap'
 import safeFind from './src/safeFind'
 import debounce from './src/debounce'
@@ -22,9 +25,13 @@ import emitEvent from './src/emitEvent'
 import findIndex from './src/findIndex'
 import dotAccess from './src/dotAccess'
 import safeReduce from './src/safeReduce'
+import randomHash from './src/randomHash'
+import looseEqual from './src/looseEqual'
 import safeFilter from './src/safeFilter'
 import monthNames from './src/monthNames'
+import queryFilter from './src/queryFilter'
 import safeForEach from './src/safeForEach'
+import toSnakeCase from './src/toSnakeCase'
 import resetScroll from './src/resetScroll'
 import matchesQuery from './src/matchesQuery'
 import scrollToElem from './src/scrollToElem'
@@ -46,6 +53,7 @@ import arrayToListItems from './src/arrayToListItems'
 import getFullMonthName from './src/getFullMonthName'
 import getShortMonthName from './src/getShortMonthName'
 
+export * from './src/ua'
 export {
   uniq,
   toPx,
@@ -67,6 +75,13 @@ export {
   safeReduce,
   safeFilter,
   safeForEach,
+  toSnakeCase,
+  slugify,
+  pxToRem,
+  isObject,
+  randomHash,
+  looseEqual,
+  queryFilter,
   resetScroll,
   getEventPath,
   scrollToElem,

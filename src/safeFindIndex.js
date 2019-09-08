@@ -1,6 +1,5 @@
 import { executeArrayMethodOrFailSafe } from '../internals'
 
-const safeFindIndex = (...args) =>
-  executeArrayMethodOrFailSafe('findIndex', ...args)
-
-export default safeFindIndex
+export default function safeFindIndex(...args) {
+  return executeArrayMethodOrFailSafe('findIndex', ...args)
+}

@@ -1,4 +1,3 @@
-const emitEvent = (el, eventType, detail) =>
-  el.dispatchEvent(new CustomEvent(eventType, { detail }))
-
-export default emitEvent
+export default function emitEvent(el, eventType, detail) {
+  return el.dispatchEvent(new CustomEvent(eventType, { detail }))
+}

@@ -1,6 +1,7 @@
 /**
  * Execute a method on an array or list-like object or fail safe to an empty one.
  *
+ * @private
  * @param {String} methodName - Array method name which must be a part of `methodNames`.
  * @param {Array} array - An array or a list-like object.
  * @param {Function} callbackfn - The callback function that should be executed on the list.
@@ -14,6 +15,8 @@ export function executeArrayMethodOrFailSafe(
   callbackfn,
   initialValueOrThisArg
 ) {
+  array = typeof array === 'string' ? [] : array
+
   if (methodNames.indexOf(methodName) === -1) {
     throw new TypeError(
       'executeArrayMethodOrFailSafe: ' +

@@ -1,4 +1,4 @@
-export const elementInView = (element, options) => {
+export default function elementInView(element, options) {
   const {
     top,
     right,
@@ -33,5 +33,3 @@ export const elementInView = (element, options) => {
     intersection.l > (options.offset.left || 0) + threshold.x
   )
 }
-
-export default elementInView

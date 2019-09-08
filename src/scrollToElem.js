@@ -1,7 +1,7 @@
-const scrollToElem = (targetElem, debounce = 100, opts) => {
+export default function scrollToElem(targetElem, debounce = 100, opts) {
   if (!(targetElem instanceof HTMLElement)) return
 
-  window.setTimeout(
+  setTimeout(
     window.scrollTo(
       0,
       targetElem.offsetTop,
@@ -10,5 +10,3 @@ const scrollToElem = (targetElem, debounce = 100, opts) => {
     debounce
   )
 }
-
-export default scrollToElem

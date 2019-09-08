@@ -1,5 +1,5 @@
 import { executeArrayMethodOrFailSafe } from '../internals'
 
-const safeSome = (...args) => executeArrayMethodOrFailSafe('some', ...args)
-
-export default safeSome
+export default function safeSome(...args) {
+  return executeArrayMethodOrFailSafe('some', ...args)
+}

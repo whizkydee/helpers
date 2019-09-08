@@ -7,7 +7,7 @@
  * @param {Object=} options - Additional MuationRecord options.
  */
 
-const observeMutations = (element, callback, options) => {
+export default function observeMutations(element, callback, options) {
   const observer = new MutationObserver(mutations =>
     mutations.forEach(m => callback(m))
   )
@@ -19,5 +19,3 @@ const observeMutations = (element, callback, options) => {
   })
   return observer
 }
-
-export default observeMutations

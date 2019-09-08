@@ -1,3 +1,3 @@
-const matchesQuery = query => window.matchMedia(query).matches
-
-export default matchesQuery
+export default function matchesQuery(query) {
+  return window.matchMedia(query).matches
+}

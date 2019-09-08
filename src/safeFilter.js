@@ -1,5 +1,5 @@
 import { executeArrayMethodOrFailSafe } from '../internals'
 
-const safeFilter = (...args) => executeArrayMethodOrFailSafe('filter', ...args)
-
-export default safeFilter
+export default function safeFilter(...args) {
+  return executeArrayMethodOrFailSafe('filter', ...args)
+}

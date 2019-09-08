@@ -1,5 +1,5 @@
 import { executeArrayMethodOrFailSafe } from '../internals'
 
-const safeSort = (...args) => executeArrayMethodOrFailSafe('sort', ...args)
-
-export default safeSort
+export default function safeSort(...args) {
+  return executeArrayMethodOrFailSafe('sort', ...args)
+}

@@ -1,3 +1,3 @@
-const toPx = (n = 0) => typeof n === 'number' && n + 'px'
-
-export default toPx
+export default function toPx(n = 0) {
+  return typeof n === 'number' && n + 'px'
+}
