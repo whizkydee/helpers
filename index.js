@@ -1,5 +1,5 @@
 /*!
- * @mrolaolu/helpers v0.2.1
+ * @mrolaolu/helpers v0.2.2
  * https://github.com/whizkydee/helpers
  * (c) 2019-present Olaolu Olawuyi
  * Released under the MIT License.
@@ -54,3 +54,7 @@ export { default as countryDialCodes } from './src/countryDialCodes'
 export { default as arrayToListItems } from './src/arrayToListItems'
 export { default as getFullMonthName } from './src/getFullMonthName'
 export { default as getShortMonthName } from './src/getShortMonthName'
+export { default as unslash } from './src/unslash'
+export { default as unslashStart } from './src/unslashStart'
+export { default as unslashEnd } from './src/unslashEnd'
+export { default as forEachValue } from './src/forEachValue'

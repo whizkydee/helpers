@@ -1,15 +1,17 @@
-import isObject from './isObject'
-
 export default function getFormFields(elem, selector = 'input[name]') {
-  if (!(elem instanceof HTMLFormElement)) return
+  const normalizeName = v =>
+    (typeof v === 'string' ? v : '').trim().replace(/\s+/g, '_')
 
-  const fields = Array.from(elem.querySelectorAll(selector) || [])
-  if (!selector) return { ...new FormData(elem), $fields: fields }
+  if (!(elem instanceof HTMLFormElement)) {
+    return
+  }
 
-  return Object.assign(
-    { $fields: fields },
-    ...fields.map(field => {
-      return isObject(field) && field.name && { [field.name]: field.value }
-    })
+  return Array.from(elem.querySelectorAll(selector) || []).reduce(
+    (acc, cur, index, fields) => ({
+      ...acc,
+      $fields: fields,
+      [normalizeName(cur.name)]: cur.value,
+    }),
+    {}
   )
 }
