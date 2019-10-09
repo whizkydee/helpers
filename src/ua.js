@@ -12,4 +12,5 @@ export const isIOS = () =>
   (UA && /iphone|ipad|ipod|ios/.test(UA)) || weexPlatform === 'ios'
 export const isChrome = () => UA && /chrome\/\d+/.test(UA) && !isEdge
 export const isPhantomJS = () => UA && /phantomjs/.test(UA)
-export const isFF = () => UA && UA.match(/firefox\/(\d+)/)
+export const isFirefox = () => UA && UA.match(/firefox\/(\d+)/)
+export const isFF = isFirefox

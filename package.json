@@ -1,7 +1,7 @@
 {
   "name": "@mrolaolu/helpers",
   "license": "MIT",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "repository": "whizkydee/helpers",
   "description": "Super-handy JavaScript utility functions for front-end development.",
   "main": "index.js",

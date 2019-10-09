@@ -1,15 +1,15 @@
-export default function getFormFields(elem, selector = 'input[name]') {
+export default function getFormFields(
+  elem,
+  selector = 'input[name]:not([type="hidden"]):not([hidden]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="image"])'
+) {
   const normalizeName = v =>
-    (typeof v === 'string' ? v : '').trim().replace(/\s+/g, '_')
+    (typeof v === 'string' ? v.trim() : '').replace(/\s+/g, '_')
 
-  if (!(elem instanceof HTMLFormElement)) {
-    return
-  }
+  if (!(elem instanceof HTMLFormElement)) return
 
   return Array.from(elem.querySelectorAll(selector) || []).reduce(
-    (acc, cur, index, fields) => ({
+    (acc, cur) => ({
       ...acc,
-      $fields: fields,
       [normalizeName(cur.name)]: cur.value,
     }),
     {}
