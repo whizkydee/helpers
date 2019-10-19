@@ -1,10 +1,11 @@
 /*!
- * @mrolaolu/helpers v0.2.3
+ * @mrolaolu/helpers v0.2.4
  * https://github.com/whizkydee/helpers
  * (c) 2019-present Olaolu Olawuyi
  * Released under the MIT License.
  */
 
+export * from './src/mimeTypes'
 export * from './src/ua'
 export { default as arrayToListItems } from './src/arrayToListItems'
 export { default as countries } from './src/countries'
@@ -51,6 +52,7 @@ export { default as shortWeekdays } from './src/shortWeekdays'
 export { default as sleep } from './src/sleep'
 export { default as slugify } from './src/slugify'
 export { default as smoothScroll } from './src/smoothScroll'
+export { default as swapKeyVal } from './src/swapKeyVal'
 export { default as toPx } from './src/toPx'
 export { default as toSnakeCase } from './src/toSnakeCase'
 export { default as uniq } from './src/uniq'
