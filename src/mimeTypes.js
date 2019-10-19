@@ -1,16 +1,5 @@
 import swapKeyVal from './swapKeyVal'
 
-export function getFileExtFromMimeType(mimeType) {
-  return mimeTypesMap[mimeType] || null
-}
-
-export function getMimeTypeFromFileExt(ext) {
-  return fileExtMap[ext] || fileExtMap[ext.slice(1)] || null
-}
-
-// pretty fast object key-val swap.
-export const mimeTypesMap = swapKeyVal(fileExtMap)
-
 export const fileExtMap = {
   '.123': 'application/vnd.lotus-1-2-3',
   '.3dml': 'text/vnd.in3d.3dml',
@@ -835,4 +824,15 @@ export const fileExtMap = {
   '.zir': 'application/vnd.zul',
   '.zirz': 'application/vnd.zul',
   '.zmm': 'application/vnd.handheld-entertainment+xml',
+}
+
+// pretty fast object key-val swap.
+export const mimeTypesMap = swapKeyVal(fileExtMap)
+
+export function getFileExtFromMimeType(mimeType) {
+  return mimeTypesMap[mimeType] || null
+}
+
+export function getMimeTypeFromFileExt(ext) {
+  return fileExtMap[ext] || fileExtMap[ext.slice(1)] || null
 }
