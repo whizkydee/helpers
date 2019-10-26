@@ -5,20 +5,20 @@ import multiInput from 'rollup-plugin-multi-input'
 export default {
   external: ['core-js'],
   input: path.resolve(__dirname, 'src/**.js'),
-	plugins: [
+  plugins: [
     multiInput(),
-		babel({
-			exclude: 'node_modules/**'
-		}),
-	],
-	output: [
-		{
+    babel({
+      exclude: 'node_modules/**'
+    }),
+  ],
+  output: [
+    {
       format: 'es',
-			dir: 'dist/es',
-		},
-		{
+      dir: 'dist/es',
+    },
+    {
       format: 'cjs',
-			dir: 'dist/cjs',
-		}
-	]
+      dir: 'dist/cjs',
+    }
+  ]
 }
