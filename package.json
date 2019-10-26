@@ -1,14 +1,28 @@
 {
   "name": "@mrolaolu/helpers",
   "license": "MIT",
-  "version": "0.2.6",
+  "version": "0.2.7",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
   "repository": "whizkydee/helpers",
   "description": "Super-handy JavaScript utility functions for front-end development.",
-  "main": "index.js",
-  "author": {
-    "name": "Olaolu Olawuyi",
-    "email": "mrolaolu@gmail.com",
-    "url": "https://twitter.com/mrolaolu"
+  "author": "Olaolu Olawuyi <mrolaolu@gmail.com> (https://olaolu.dev)",
+  "scripts": {
+    "flush": "del dist",
+    "build": "yarn flush && rollup -c rollup.config.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
+    "bundlesize": "^0.18.0",
+    "core-js": "^3.3.4",
+    "del-cli": "^3.0.0",
+    "rollup": "^1.25.2",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-multi-input": "^1.0.2"
   },
   "keywords": [
     "javascript",
