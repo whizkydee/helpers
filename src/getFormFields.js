@@ -1,3 +1,5 @@
+import 'core-js/modules/es.array.from'
+
 export default function getFormFields(
   elem,
   selector = 'input[name]:not([type="hidden"]):not([hidden]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="image"])'

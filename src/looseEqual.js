@@ -1,3 +1,5 @@
+import isObject from './isObject'
+
 export default function looseEqual(a, b) {
   if (a === b) return true
 

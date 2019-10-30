@@ -1,4 +1,4 @@
-const countryDialCodes = [
+export default [
   { label: '+93', value: 'Afghanistan' },
   { label: '+355', value: 'Albania' },
   { label: '+213', value: 'Algeria' },
@@ -235,5 +235,3 @@ const countryDialCodes = [
   { label: '+260', value: 'Zambia' },
   { label: '+263', value: 'Zimbabwe' },
 ]
-
-export default countryDialCodes

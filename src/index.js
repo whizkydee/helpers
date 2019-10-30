@@ -1,5 +1,5 @@
 /*!
- * @mrolaolu/helpers v0.2.7
+ * @mrolaolu/helpers v0.2.8
  * https://github.com/whizkydee/helpers
  * (c) 2019-present Olaolu Olawuyi
  * Released under the MIT License.
@@ -7,7 +7,9 @@
 
 export * from './mimeTypes'
 export * from './ua'
+export { default as amOrPm } from './amOrPm'
 export { default as arrayToListItems } from './arrayToListItems'
+export { default as cookiesToObject } from './cookiesToObject'
 export { default as countries } from './countries'
 export { default as countryDialCodes } from './countryDialCodes'
 export { default as debounce } from './debounce'
@@ -24,6 +26,7 @@ export { default as getFullWeekday } from './getFullWeekday'
 export { default as getShortMonthName } from './getShortMonthName'
 export { default as getShortWeekday } from './getShortWeekday'
 export { default as isObject } from './isObject'
+export { default as isPrintableChar } from './isPrintableChar'
 export { default as isPlainObject } from './isPlainObject'
 export { default as looseEqual } from './looseEqual'
 export { default as matchesQuery } from './matchesQuery'

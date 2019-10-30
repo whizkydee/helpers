@@ -22,12 +22,12 @@ import { getFormFields } from '@mrolaolu/helpers'
 or ...
 
 ```js
-import getFormFields from '@mrolaolu/helpers/src/getFormFields'
+import getFormFields from '@mrolaolu/helpers/es/getFormFields'
 ```
 
 ```js
 getFormFields(document.getElementById('form'))
-// => { $fields: Array, email: hello@test.io, password: Unicorns!, ... }
+// => { email: hello@test.io, password: Unicorns!, ... }
 ```
 
 <!-- {p: style='display:none'} -->

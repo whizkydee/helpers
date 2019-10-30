@@ -1,4 +1,4 @@
-const weekdays = [
+export default [
   'Sunday',
   'Monday',
   'Tuesday',
@@ -7,5 +7,3 @@ const weekdays = [
   'Friday',
   'Saturday',
 ]
-
-export default weekdays

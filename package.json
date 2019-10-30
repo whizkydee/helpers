@@ -4,14 +4,14 @@
   "files": [
     "dist"
   ],
-  "version": "0.2.7",
-  "main": "dist/cjs/index.js",
-  "module": "dist/es/index.js",
+  "version": "0.2.8",
+  "main": "cjs/index.js",
+  "module": "es/index.js",
   "repository": "whizkydee/helpers",
   "description": "Super-handy JavaScript utility functions for front-end development.",
   "author": "Olaolu Olawuyi <mrolaolu@gmail.com> (https://olaolu.dev)",
   "scripts": {
-    "flush": "del dist",
+    "flush": "del es cjs",
     "build": "yarn flush && rollup -c rollup.config.js"
   },
   "devDependencies": {

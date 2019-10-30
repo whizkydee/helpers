@@ -1,4 +1,4 @@
-const monthNames = [
+export default [
   'January',
   'February',
   'March',
@@ -12,5 +12,3 @@ const monthNames = [
   'November',
   'December',
 ]
-
-export default monthNames

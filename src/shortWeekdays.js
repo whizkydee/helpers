@@ -1,3 +1,1 @@
-const shortWeekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
-
-export default shortWeekdays
+export default ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
