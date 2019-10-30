@@ -2,9 +2,10 @@
   "name": "@mrolaolu/helpers",
   "license": "MIT",
   "files": [
-    "dist"
+    "es",
+    "cjs"
   ],
-  "version": "0.2.8",
+  "version": "0.2.9",
   "main": "cjs/index.js",
   "module": "es/index.js",
   "repository": "whizkydee/helpers",
