@@ -5,15 +5,16 @@
     "es",
     "cjs"
   ],
-  "version": "0.2.10",
+  "version": "0.2.11",
   "main": "cjs/index.js",
   "module": "es/index.js",
+  "jsnext:main": "es/index.js",
   "repository": "whizkydee/helpers",
   "description": "Super-handy JavaScript utility functions for front-end development.",
   "author": "Olaolu Olawuyi <mrolaolu@gmail.com> (https://olaolu.dev)",
   "scripts": {
     "flush": "del es cjs",
-    "build": "yarn flush && rollup -c rollup.config.js"
+    "build": "yarn flush && rollup -c"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",

@@ -19,6 +19,7 @@ export default {
     {
       dir: 'cjs',
       format: 'cjs',
+      exports: 'named',
     },
   ],
 }
