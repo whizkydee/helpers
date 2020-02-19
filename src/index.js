@@ -1,5 +1,5 @@
 /*!
- * @mrolaolu/helpers v0.2.11
+ * @mrolaolu/helpers v0.2.12
  * https://github.com/whizkydee/helpers
  * (c) 2019-present Olaolu Olawuyi
  * Released under the MIT License.
@@ -30,9 +30,11 @@ export { default as isPrintableChar } from './isPrintableChar'
 export { default as isPlainObject } from './isPlainObject'
 export { default as looseEqual } from './looseEqual'
 export { default as matchesQuery } from './matchesQuery'
+export { default as memoize } from './memoize'
 export { default as monthNames } from './monthNames'
 export { default as objectIsEmpty } from './objectIsEmpty'
 export { default as observeMutations } from './observeMutations'
+export { default as once } from './once'
 export { default as openExternalWindow } from './openExternalWindow'
 export { default as prefixWithZero } from './prefixWithZero'
 export { default as pxToRem } from './pxToRem'
