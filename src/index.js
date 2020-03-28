@@ -1,5 +1,5 @@
 /*!
- * @mrolaolu/helpers v0.2.12
+ * @mrolaolu/helpers v0.2.13
  * https://github.com/whizkydee/helpers
  * (c) 2019-present Olaolu Olawuyi
  * Released under the MIT License.
@@ -17,6 +17,8 @@ export { default as dotAccess } from './dotAccess'
 export { default as elementInView } from './elementInView'
 export { default as emitEvent } from './emitEvent'
 export { default as findIndex } from './findIndex'
+export { default as flattenStr } from './flattenStr'
+export { default as focusableSelectors } from './focusableSelectors'
 export { default as forEachValue } from './forEachValue'
 export { default as getAspectRatio } from './getAspectRatio'
 export { default as getEventPath } from './getEventPath'
@@ -25,6 +27,7 @@ export { default as getFullMonthName } from './getFullMonthName'
 export { default as getFullWeekday } from './getFullWeekday'
 export { default as getShortMonthName } from './getShortMonthName'
 export { default as getShortWeekday } from './getShortWeekday'
+export { default as htmlElements } from './htmlElements'
 export { default as isObject } from './isObject'
 export { default as isPrintableChar } from './isPrintableChar'
 export { default as isPlainObject } from './isPlainObject'
@@ -36,6 +39,7 @@ export { default as objectIsEmpty } from './objectIsEmpty'
 export { default as observeMutations } from './observeMutations'
 export { default as once } from './once'
 export { default as openExternalWindow } from './openExternalWindow'
+export { default as parseHTML } from './parseHTML'
 export { default as prefixWithZero } from './prefixWithZero'
 export { default as pxToRem } from './pxToRem'
 export { default as queryFilter } from './queryFilter'
