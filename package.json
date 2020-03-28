@@ -5,7 +5,7 @@
     "es",
     "cjs"
   ],
-  "version": "0.2.13",
+  "version": "0.2.14",
   "main": "cjs/index.js",
   "module": "es/index.js",
   "jsnext:main": "es/index.js",
@@ -14,7 +14,8 @@
   "author": "Olaolu Olawuyi <mrolaolu@gmail.com> (https://olaolu.dev)",
   "scripts": {
     "flush": "del es cjs",
-    "build": "yarn flush && rollup -c"
+    "build": "yarn flush && rollup -c",
+    "prepublishOnly": "yarn build"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
