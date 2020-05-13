@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "downlevelIteration": true,
+    "module": "commonjs",
+    // "outDir": "es",
+    "strict": true,
+    "rootDir": "src",
+    "declaration": true,
+    "esModuleInterop": true
+  },
+  "exclude": ["node_modules", "cjs", "es"]
+}
