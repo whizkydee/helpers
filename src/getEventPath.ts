@@ -1,22 +1,18 @@
-interface ChromeCompatEvent extends Event {
-  path?: EventTarget[]
-}
-
 export default function getEventPath(
-  event: ChromeCompatEvent
-): EventTarget[] | null {
-  if (!(event instanceof Event)) return null
+  event: Event & { path?: EventTarget[] }
+): (EventTarget | null)[] {
+  if (!(event instanceof Event)) return []
 
   return (
     (Array.isArray(event.path) && event.path) ||
     (typeof event.composedPath == 'function' && event.composedPath()) ||
     (function fallback() {
       const path = []
-      let target = event.target as Node & ParentNode
+      let target = event.target
 
-      while (target.parentNode !== null) {
+      while (target !== window && (target as HTMLElement).parentNode !== null) {
         path.push(target)
-        target = target.parentNode
+        target = (target as HTMLElement).parentNode
       }
 
       path.push(document, window)
