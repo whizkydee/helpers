@@ -2,7 +2,7 @@
 export default function queryFilter<
   T extends any[],
   S extends { [key: string]: any }
->(array: T, query: Partial<S>): Array<S> | void {
+>(array: T, query: Partial<S>): S[] | void {
   if (!Array.isArray(array) || typeof query !== 'object') return
 
   return array.filter((obj: S) =>
