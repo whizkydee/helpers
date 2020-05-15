@@ -1,8 +1,6 @@
-// @ts-ignore
-// TODO: Fix/improve this type definition
-import { default as swapKeysForValue, Swap } from './swapKeysForValue'
+import swapKeysForValue from './swapKeysForValue'
 
-export const fileExtMap = {
+const fileExtensionsMap = {
   '.123': 'application/vnd.lotus-1-2-3',
   '.3dml': 'text/vnd.in3d.3dml',
   '.3g2': 'video/3gpp2',
@@ -828,18 +826,34 @@ export const fileExtMap = {
   '.zmm': 'application/vnd.handheld-entertainment+xml',
 } as const
 
-// pretty fast object key-value swap.
-export const mimeTypesMap = swapKeysForValue(fileExtMap)
+type FileExtensions = keyof typeof fileExtensionsMap
+type MimeTypes = ValueOf<typeof fileExtensionsMap>
 
-export function getFileExtFromMimeType<
-  T extends Swap<typeof fileExtMap>,
-  U extends keyof T
->(mimeType: T[U]): null | T[keyof T] {
-  return mimeTypesMap[mimeType] || null
+// pretty fast object key-value swap.
+const mimeTypesMap = swapKeysForValue(fileExtensionsMap)
+
+function getFileExtensionFromMimeType(
+  mimeType: MimeTypes
+): FileExtensions | null {
+  if (!(mimeType in mimeTypesMap)) return null
+  return mimeTypesMap[mimeType]
 }
 
-export function getMimeTypeFromFileExt<T extends keyof typeof fileExtMap>(
-  ext: T
-): Swap<typeof fileExtMap> | null {
-  return fileExtMap[ext] || fileExtMap[ext.slice(1)] || null
+function getMimeTypeFromFileExtension(
+  extension: FileExtensions | string
+): MimeTypes | null {
+  return (
+    fileExtensionsMap[extension as FileExtensions] ||
+    fileExtensionsMap[('.' + extension) as FileExtensions] ||
+    null
+  )
+}
+
+export {
+  FileExtensions,
+  MimeTypes,
+  fileExtensionsMap,
+  mimeTypesMap,
+  getFileExtensionFromMimeType,
+  getMimeTypeFromFileExtension,
 }

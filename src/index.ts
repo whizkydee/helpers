@@ -5,7 +5,14 @@
  * Released under the MIT License.
  */
 
-export * from './mimeTypes'
+export {
+  FileExtensions,
+  MimeTypes,
+  fileExtensionsMap,
+  mimeTypesMap,
+  getFileExtensionFromMimeType,
+  getMimeTypeFromFileExtension,
+} from './mimeTypes'
 export * from './ua'
 export { default as amOrPm } from './amOrPm'
 export { default as cookiesToObject } from './cookiesToObject'
