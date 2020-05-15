@@ -1,6 +1,6 @@
 # [@mrolaolu/helpers](https://npm.im/@mrolaolu/helpers)
 
-> Super handy JavaScript utility functions for front-end development. 📦
+> Super handy JavaScript utilities for front-end development. 🛠
 
 **Note:** This is a work in progress and as such is not well documented or
 ready-to-use.
