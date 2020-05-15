@@ -4,6 +4,8 @@ export default [
   'button:not(:disabled):not([hidden])',
   'embed:not([hidden])',
   'iframe:not([hidden])',
+  'audio[controls]:not([hidden])',
+  'video[controls]:not([hidden])',
   'input:not([type="hidden"]):not(:disabled):not([hidden])',
   'object:not([hidden])',
   'select:not(:disabled):not([hidden])',
