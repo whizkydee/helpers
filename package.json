@@ -6,17 +6,17 @@
   ],
   "version": "0.2.14",
   "main": "dist/cjs/index.js",
-  "module": "dist/es/index.js",
-  "jsnext:main": "dist/es/index.js",
+  "module": "dist/esm/index.js",
+  "jsnext:main": "dist/esm/index.js",
   "repository": "whizkydee/helpers",
   "description": "Super handy JavaScript utility functions for front-end development.",
   "author": "Olaolu Olawuyi <mrolaolu@gmail.com> (https://olaolu.dev)",
   "scripts": {
     "flush": "del dist",
-    "build:es": "rollup -c --environment ESM",
+    "build:esm": "rollup -c --environment ESM",
     "build:cjs": "rollup -c --environment CJS",
     "prepublishOnly": "yarn build",
-    "build": "yarn flush && yarn build:es && yarn build:cjs"
+    "build": "yarn flush && yarn build:esm && yarn build:cjs"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",

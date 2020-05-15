@@ -22,7 +22,7 @@ import { getFormFields } from '@mrolaolu/helpers'
 or ...
 
 ```js
-import getFormFields from '@mrolaolu/helpers/es/getFormFields'
+import getFormFields from '@mrolaolu/helpers/esm/getFormFields'
 ```
 
 ```js
