@@ -9,7 +9,7 @@
   "module": "dist/esm/index.js",
   "jsnext:main": "dist/esm/index.js",
   "repository": "whizkydee/helpers",
-  "description": "Super handy JavaScript utility functions for front-end development.",
+  "description": "Super handy JavaScript utilities for frontend development.",
   "author": "Olaolu Olawuyi <mrolaolu@gmail.com> (https://olaolu.dev)",
   "scripts": {
     "flush": "del dist",
