@@ -2,35 +2,41 @@
   "name": "@mrolaolu/helpers",
   "license": "MIT",
   "files": [
-    "es",
-    "cjs"
+    "dist"
   ],
   "version": "0.2.14",
-  "main": "cjs/index.js",
-  "module": "es/index.js",
-  "jsnext:main": "es/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "jsnext:main": "dist/esm/index.js",
   "repository": "whizkydee/helpers",
-  "description": "Super-handy JavaScript utility functions for front-end development.",
+  "description": "Super handy JavaScript utility functions for front-end development.",
   "author": "Olaolu Olawuyi <mrolaolu@gmail.com> (https://olaolu.dev)",
   "scripts": {
-    "flush": "del es cjs",
-    "build": "yarn flush && rollup -c",
-    "prepublishOnly": "yarn build"
+    "flush": "del dist",
+    "build:esm": "rollup -c --environment ESM",
+    "build:cjs": "rollup -c --environment CJS",
+    "prepublishOnly": "yarn build",
+    "build": "yarn flush && yarn build:esm && yarn build:cjs"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
     "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/preset-env": "^7.6.3",
+    "@rollup/plugin-typescript": "^4.1.1",
+    "@types/lodash": "^4.14.149",
     "bundlesize": "^0.18.0",
     "del-cli": "^3.0.0",
-    "rollup": "^1.25.2",
-    "rollup-plugin-babel": "^4.3.3",
+    "rollup": "^2.6.1",
+    "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-multi-input": "^1.0.2"
+    "rollup-plugin-multi-input": "^1.1.1",
+    "tsd": "^0.11.0",
+    "tslib": "^1.11.1",
+    "typescript": "^3.8.3"
   },
   "dependencies": {
-    "core-js": "^3.3.4"
+    "safely-iterate": "^1.0.1"
   },
   "keywords": [
     "javascript",
