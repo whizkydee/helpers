@@ -1,4 +1,4 @@
-import swapKeysForValue from './swapKeysForValue'
+import swapKeysForValues from './swapKeysForValues'
 
 const fileExtensionsMap = {
   '.123': 'application/vnd.lotus-1-2-3',
@@ -830,7 +830,7 @@ type FileExtensions = keyof typeof fileExtensionsMap
 type MimeTypes = ValueOf<typeof fileExtensionsMap>
 
 // pretty fast object key-value swap.
-const mimeTypesMap = swapKeysForValue(fileExtensionsMap)
+const mimeTypesMap = swapKeysForValues(fileExtensionsMap)
 
 function getFileExtensionFromMimeType(
   mimeType: MimeTypes
