@@ -1,5 +1,5 @@
 /*!
- * @mrolaolu/helpers v0.3.0
+ * @mrolaolu/helpers v0.3.1
  * https://github.com/whizkydee/helpers
  * (c) 2019-present Olaolu Olawuyi
  * Released under the MIT License.
@@ -13,7 +13,23 @@ export {
   getFileExtensionFromMimeType,
   getMimeTypeFromFileExtension,
 } from './mimeTypes'
-export * from './ua'
+export {
+  isIOS,
+  isIE9,
+  UA,
+  inBrowser,
+  isEdge,
+  weexPlatform,
+  isMacintosh,
+  isAndroid,
+  isPhantomJS,
+  inWeex,
+  isFF,
+  isFirefox,
+  isWindows,
+  isChrome,
+  isIE,
+} from './ua'
 export { default as amOrPm } from './amOrPm'
 export { default as cookiesToObject } from './cookiesToObject'
 export { default as countries } from './countries'
