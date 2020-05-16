@@ -2,7 +2,8 @@
   "name": "@mrolaolu/helpers",
   "license": "MIT",
   "files": [
-    "dist"
+    "dist",
+    "common.d.ts"
   ],
   "version": "0.3.0",
   "main": "dist/cjs/index.js",

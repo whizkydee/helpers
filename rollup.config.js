@@ -1,5 +1,6 @@
 import path from 'path'
 import babel from 'rollup-plugin-babel'
+import defaultTsConfig from './tsconfig.json'
 import multiInput from 'rollup-plugin-multi-input'
 import typescript from '@rollup/plugin-typescript'
 
@@ -10,16 +11,11 @@ export default {
   plugins: [
     multiInput(),
     typescript({
-      lib: ['DOM'],
-      target: 'es5',
-      downlevelIteration: true,
-      outDir: isCommonJS ? 'dist/cjs' : 'dist/esm',
-      strict: true,
-      rootDir: 'src',
-      pretty: true,
-      declaration: true,
-      esModuleInterop: true,
-      exclude: ['node_modules', 'dist'],
+      ...defaultTsConfig.compilerOptions,
+      ...{
+        outDir: isCommonJS ? 'dist/cjs' : 'dist/esm',
+        exclude: defaultTsConfig.exclude,
+      },
     }),
     babel({
       exclude: 'node_modules/**',
