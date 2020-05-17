@@ -5,7 +5,7 @@
     "dist",
     "common.d.ts"
   ],
-  "version": "0.3.1",
+  "version": "0.3.2",
   "types": "dist/esm/index.d.ts",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
