@@ -834,9 +834,14 @@ const mimeTypesMap = swapKeysForValues(fileExtensionsMap)
 
 function getFileExtensionFromMimeType(
   mimeType: MimeTypes
-): FileExtensions | null {
+): FileExtensions | FileExtensions[] | null {
   if (!(mimeType in mimeTypesMap)) return null
-  return mimeTypesMap[mimeType]
+  const matches = Object.keys(fileExtensionsMap)
+    .map(ext => fileExtensionsMap[ext as FileExtensions] === mimeType && ext)
+    .filter(Boolean)
+
+  if (matches.length > 1) return matches as FileExtensions[]
+  return matches[0] as FileExtensions
 }
 
 function getMimeTypeFromFileExtension(
