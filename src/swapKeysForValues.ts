@@ -8,7 +8,7 @@ export type Swap<T extends Record<PropertyKey, PropertyKey>> = {
   [V in T[keyof T]]: KeyFromValue<V, T>
 }
 
-export default function swapKeysForValue<
+export default function swapKeysForValues<
   T extends Record<PropertyKey, PropertyKey>
 >(obj: T): Swap<T> {
   let swaped: unknown = {}
