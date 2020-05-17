@@ -10,6 +10,7 @@ export default function getFocusableNodes(
   ) as HTMLElement[]
   return focusables.filter(
     elem =>
+      elem instanceof HTMLElement &&
       getComputedStyle(elem).display !== 'none' &&
       getComputedStyle(elem).visibility !== 'hidden'
   )
