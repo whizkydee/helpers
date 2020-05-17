@@ -3,7 +3,7 @@ import findIndex from './findIndex'
 import shortWeekdays, { ShortWeekdays } from './shortWeekdays'
 
 export default function getFullWeekday(
-  value: Date | ShortWeekdays
+  value: Date | ShortWeekdays = new Date()
 ): WeekDays | null {
   if (value instanceof Date) return weekdays[value.getDay()]
   const index = findIndex(
