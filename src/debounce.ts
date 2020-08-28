@@ -11,7 +11,7 @@ export default function debounce<T extends (...args: any[]) => void>(
     this: ThisParameterType<T>,
     ...args: Parameters<T>
   ): any {
-    clearTimeout(timeoutId as number | undefined)
+    clearTimeout(timeoutId!)
     timeoutId = setTimeout(() => fn.apply(this, args), ms)
   }
 }

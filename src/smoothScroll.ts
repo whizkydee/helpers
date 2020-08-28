@@ -9,7 +9,7 @@ export default function smoothScroll(
   }
 
   if (target == null) return
-  ;(target as HTMLElement).scrollIntoView({
+  target.scrollIntoView({
     behavior: 'smooth',
     ...options,
   })

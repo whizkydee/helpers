@@ -1,6 +1,4 @@
-export default function openExternalWindow<T extends string>(
-  location: T
-): Window {
+export default function openExternalWindow(location: string): Window {
   let externalWindow = window.open()!
   externalWindow.opener = null
   externalWindow.location.href = location
