@@ -1,4 +1,5 @@
 export default [
+  '*[tabindex]',
   'a[href]:not([hidden])',
   'area[href]:not([hidden])',
   'button:not(:disabled):not([hidden])',
@@ -10,6 +11,5 @@ export default [
   'object:not([hidden])',
   'select:not(:disabled):not([hidden])',
   'textarea:not(:disabled):not([hidden])',
-  '[tabindex]:not([tabindex="-1"]):not([hidden])',
-  '[contenteditable]:not([contenteditable="false"]):not([hidden])',
+  '*[contenteditable]:not([contenteditable="false"]):not([hidden])',
 ] as const

@@ -5,13 +5,13 @@ export default function getFocusableNodes(
   target: HTMLElement = document.documentElement
 ): HTMLElement[] | never[] {
   if (!(target instanceof HTMLElement)) return []
-  const focusables = slice(
+  const potentialCandidates: HTMLElement[] = slice(
     target.querySelectorAll(focusableSelectors.join())
-  ) as HTMLElement[]
-  return focusables.filter(
+  )
+
+  return potentialCandidates.filter(
     elem =>
       elem instanceof HTMLElement &&
-      getComputedStyle(elem).display !== 'none' &&
-      getComputedStyle(elem).visibility !== 'hidden'
+      window.getComputedStyle(elem).display !== 'none'
   )
 }
