@@ -1,28 +1,28 @@
-import getFirstFocusableNode from './getFirstFocusableNode'
-import getLastFocusableNode from './getLastFocusableNode'
+import getFirstTabbableNode from './getFirstTabbableNode'
+import getLastTabbableNode from './getLastTabbableNode'
 
 export default function trapFocus(
   event: KeyboardEvent,
   elem: HTMLElement = document.documentElement
-): (() => void) | void {
+) {
   if (
     !(event instanceof KeyboardEvent) ||
     !(elem instanceof HTMLElement) ||
-    (event.key !== 'Tab' && event.keyCode !== 9)
+    event.key !== 'Tab'
   )
     return
 
-  let firstFocusableEl = getFirstFocusableNode(elem)
-  let lastFocusableEl = getLastFocusableNode(elem)
+  let firstTabbableEl = getFirstTabbableNode(elem)
+  let lastTabbableEl = getLastTabbableNode(elem)
   const activateFocusTrap = () => {
     if (event.shiftKey) {
-      if (document.activeElement === firstFocusableEl) {
-        ;(lastFocusableEl as HTMLElement).focus()
+      if (document.activeElement === firstTabbableEl) {
+        lastTabbableEl!.focus()
         event.preventDefault()
       }
     } else {
-      if (document.activeElement === lastFocusableEl) {
-        ;(firstFocusableEl as HTMLElement).focus()
+      if (document.activeElement === lastTabbableEl) {
+        firstTabbableEl!.focus()
         event.preventDefault()
       }
     }
